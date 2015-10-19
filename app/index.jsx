@@ -1,18 +1,19 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
-var log = require('bows')('App');
+const log = require('bows')('App');
 
-require('./index.css');
+import styles from './index.css';
 
 export default class App extends React.Component {
   render() {
     return (
-      <div className="App">
+      <div className={styles.App}>
         <h1>THE NEW APP</h1>
       </div>
     );
   }
 };
 
-React.render(<App/>, document.body);
+log('app starting up...');
 
+React.render(<App/>, document.body);
